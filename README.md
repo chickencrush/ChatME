@@ -1,172 +1,163 @@
-# 💬 TeamChat - Aplikasi Chat Tim Kerja
+# 💬 TeamChat - Web App Chat Tim Kerja
 
-Aplikasi chat tim kerja modern mirip Slack/Microsoft Teams yang dibangun dengan React, TypeScript, dan Tailwind CSS.
+Aplikasi chat tim kerja modern sebagai **Web App** yang bisa diakses langsung dari browser. Mirip Slack/Microsoft Teams dengan fitur-fitur canggih.
 
-## ✨ Fitur
+## ✨ Fitur Web App
 
-- 📢 Channel publik & private
-- 👥 Daftar anggota tim dengan status (Online/Away/Busy/Offline)
-- 💬 Real-time chat dengan grouping pesan per tanggal
-- 😊 Reactions emoji pada pesan
-- 📱 Responsive design (mobile & desktop)
-- 🔍 Pencarian & notifikasi unread count
-- ⚡ Quick emoji picker
+### 💬 Chat & Komunikasi
+- 📢 **6 Channel** (umum, frontend, backend, design, data-analytics, random)
+- 💬 **Real-time chat** dengan grouping pesan per tanggal
+- 😊 **Emoji picker** lengkap dengan 5 kategori
+- 👍 **Reactions** pada pesan
+- ⌨️ **Typing indicator** - lihat siapa yang sedang mengetik
+- 🤖 **Auto-reply simulation** - anggota tim otomatis merespon
 
----
+### 🎨 UI/UX
+- 🌙 **Dark Mode** - toggle antara light & dark theme
+- 📱 **Fully Responsive** - optimal di desktop, tablet, dan mobile
+- ⚡ **Splash Screen** - loading animation saat pertama buka
+- 🎭 **Smooth Animations** - transisi halus di setiap interaksi
+- 🎯 **Modern Design** - UI clean dan profesional
 
-## 🛠️ Prerequisites
+### 🔍 Pencarian & Navigasi
+- 🔍 **Search Modal** - cari pesan, channel, atau anggota
+- ⌨️ **Keyboard Shortcuts** - `Ctrl+K` untuk search, `Enter` untuk kirim
+- 🔔 **Unread Badges** - notifikasi pesan belum dibaca
+- 📌 **Quick Actions** - tombol aksi di hover pesan
 
-Sebelum memulai, pastikan Anda sudah menginstall:
+### 👥 Manajemen Tim
+- 👥 **Member List** - lihat semua anggota dan status mereka
+- 🟢 **Status Online** - Online, Away, Busy, Offline
+- 🏷️ **Role Tags** - lihat role setiap anggota
 
-- **Node.js** versi 18 atau lebih baru → [Download Node.js](https://nodejs.org/)
-- **npm** (sudah termasuk saat install Node.js)
-
-Cek versi Node.js dengan perintah:
-```bash
-node --version
-npm --version
-```
-
----
-
-## 📦 Cara Install
-
-### 1. Download / Clone Project
-
-**Opsi A: Download ZIP**
-- Klik tombol **Code** → **Download ZIP** di GitHub
-- Extract file ZIP ke folder yang diinginkan
-
-**Opsi B: Clone dari Git**
-```bash
-git clone https://github.com/username/teamchat.git
-cd teamchat
-```
-
-### 2. Install Dependencies
-
-Buka terminal/command prompt di folder project, lalu jalankan:
-
-```bash
-npm install
-```
-
-Tunggu sampai semua package terinstall (biasanya 1-3 menit tergantung koneksi internet).
-
-### 3. Jalankan Aplikasi (Development Mode)
-
-```bash
-npm run dev
-```
-
-Anda akan melihat output seperti:
-```
-  VITE v6.x.x  ready in xxx ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-```
-
-### 4. Buka di Browser
-
-Buka browser dan akses:
-```
-http://localhost:5173
-```
+### 💾 Data & Penyimpanan
+- 💾 **LocalStorage** - pesan tersimpan otomatis di browser
+- 🔄 **Reset Data** - kembalikan ke data default
+- 📱 **PWA-Ready** - bisa di-install sebagai app di mobile
 
 ---
 
-## 🏗️ Build untuk Production
+## 🚀 Cara Menggunakan (Web App)
 
-Untuk membuat versi production yang siap deploy:
+### Akses Langsung
+Buka aplikasi di browser - tidak perlu install apapun!
 
-```bash
-npm run build
-```
+### Install sebagai App (PWA)
+**Di Mobile (Android/iOS):**
+1. Buka di Chrome/Safari
+2. Tap menu (⋮ atau Share)
+3. Pilih "Add to Home Screen" / "Tambah ke Layar Utama"
+4. App icon akan muncul di home screen
 
-Hasil build akan ada di folder `dist/`. Anda bisa upload isi folder ini ke hosting.
-
-### Preview hasil build (opsional):
-```bash
-npm run preview
-```
-
----
-
-## 🚀 Cara Deploy
-
-### Deploy ke Vercel (Gratis)
-1. Push project ke GitHub
-2. Buka [vercel.com](https://vercel.com) dan login
-3. Klik **New Project** → Import dari GitHub
-4. Klik **Deploy**
-
-### Deploy ke Netlify (Gratis)
-1. Jalankan `npm run build`
-2. Drag & drop folder `dist/` ke [netlify.com/drop](https://app.netlify.com/drop)
-
-### Deploy ke GitHub Pages
-1. Install package: `npm install -D gh-pages`
-2. Tambahkan di `package.json`:
-   ```json
-   "homepage": "https://username.github.io/teamchat",
-   "scripts": {
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-3. Jalankan: `npm run build && npm run deploy`
-
----
-
-## 📁 Struktur Project
-
-```
-teamchat/
-├── public/              # File statis (favicon, dll)
-├── src/
-│   ├── components/      # Komponen React
-│   │   ├── Sidebar.tsx      # Sidebar channel list
-│   │   ├── ChatArea.tsx     # Area chat & input pesan
-│   │   └── MemberList.tsx   # Daftar anggota tim
-│   ├── App.tsx          # Komponen utama
-│   ├── main.tsx         # Entry point
-│   ├── index.css        # Global styles
-│   ├── types.ts         # TypeScript types
-│   └── data.ts          # Data dummy (users, channels)
-├── index.html           # HTML template
-├── package.json         # Dependencies & scripts
-├── vite.config.ts       # Konfigurasi Vite
-├── tailwind.config.js   # Konfigurasi Tailwind
-└── tsconfig.json        # Konfigurasi TypeScript
-```
+**Di Desktop (Chrome/Edge):**
+1. Buka di browser
+2. Klik icon install di address bar
+3. Atau: Menu → "Install TeamChat"
 
 ---
 
 ## 🎮 Cara Menggunakan Aplikasi
 
-1. **Pilih Channel** - Klik nama channel di sidebar kiri (misal: #umum, #frontend)
-2. **Baca Pesan** - Scroll untuk melihat pesan-pesan sebelumnya
-3. **Kirim Pesan** - Ketik di input bawah, tekan Enter atau klik tombol "Kirim"
-4. **Lihat Anggota** - Lihat panel kanan untuk daftar anggota dan status mereka
-5. **Mobile** - Gunakan tombol hamburger (☰) untuk buka sidebar, tombol 👥 untuk lihat anggota
+| Aksi | Cara |
+|------|------|
+| **Pilih channel** | Klik nama channel di sidebar kiri |
+| **Kirim pesan** | Ketik di kotak bawah → tekan `Enter` |
+| **Baris baru** | Tekan `Shift + Enter` |
+| **Cari pesan** | Klik search bar atau tekan `Ctrl+K` |
+| **Lihat anggota** | Panel kanan (atau tombol 👥 di mobile) |
+| **Dark mode** | Klik 🌙/☀️ di sidebar |
+| **Emoji** | Klik icon emoji di input |
+| **Reset data** | Klik tombol 🔄 di kiri bawah |
+| **Buka sidebar** | Klik ☰ di mobile |
 
 ---
 
-## 🔧 Troubleshooting
+## 🛠️ Untuk Developer
 
-| Masalah | Solusi |
+### Tech Stack
+- ⚛️ React 18 + TypeScript
+- 🎨 Tailwind CSS (dark mode support)
+- ⚡ Vite (build tool)
+- 💾 LocalStorage API
+
+### Install & Run
+```bash
+# Install dependencies
+npm install
+
+# Development mode
+npm run dev
+
+# Build production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Struktur Project
+```
+src/
+├── components/
+│   ├── Sidebar.tsx        # Sidebar navigasi & channel list
+│   ├── ChatArea.tsx       # Area chat & input pesan
+│   ├── MemberList.tsx     # Daftar anggota tim
+│   ├── SplashScreen.tsx   # Loading animation
+│   └── SearchModal.tsx    # Modal pencarian
+├── hooks/
+│   └── useLocalStorage.ts # Custom hooks (localStorage & dark mode)
+├── App.tsx                # Komponen utama
+├── types.ts               # TypeScript interfaces
+├── data.ts                # Data dummy & auto-replies
+├── index.css              # Global styles & animations
+└── main.tsx               # Entry point
+```
+
+---
+
+## 🌐 Deploy Web App
+
+### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel
+```
+
+### Netlify
+1. Build: `npm run build`
+2. Upload folder `dist/` ke Netlify
+
+### GitHub Pages
+```bash
+npm install -D gh-pages
+# Tambahkan "homepage" di package.json
+npm run build
+npx gh-pages -d dist
+```
+
+---
+
+## 📱 Browser Support
+
+| Browser | Status |
 |---------|--------|
-| `npm: command not found` | Install Node.js dari nodejs.org |
-| `Port 5173 already in use` | Jalankan `npm run dev -- --port 3000` |
-| `Module not found` | Jalankan ulang `npm install` |
-| `Build error` | Pastikan Node.js versi 18+ |
-| Halaman blank | Buka Console browser (F12) untuk lihat error |
+| Chrome 90+ | ✅ Full support |
+| Firefox 88+ | ✅ Full support |
+| Safari 14+ | ✅ Full support |
+| Edge 90+ | ✅ Full support |
+| Mobile Safari | ✅ Full support |
+| Chrome Android | ✅ Full support |
 
 ---
 
-## 📝 Lisensi
+## 🔑 Keyboard Shortcuts
 
-MIT License - Bebas digunakan untuk keperluan apapun.
+| Shortcut | Aksi |
+|----------|------|
+| `Ctrl/⌘ + K` | Buka pencarian |
+| `Enter` | Kirim pesan |
+| `Shift + Enter` | Baris baru |
+| `Escape` | Tutup modal/search |
 
 ---
 
