@@ -276,3 +276,49 @@ export const initialChannels: Channel[] = [
     ],
   },
 ];
+
+// Auto-reply responses for simulation
+export const autoReplies: Record<string, string[]> = {
+  ch1: [
+    'Noted, terima kasih infonya! 👍',
+    'Siap, saya akan跟进 hal ini.',
+    'Oke, nanti kita bahas di meeting ya.',
+    'Mantap! Keep up the good work! 🔥',
+    'Bisa tolong detail lebih lanjut?',
+  ],
+  ch2: [
+    'Saya sudah cek, looks good! ✅',
+    'Coba pakai approach yang baru, lebih clean.',
+    'PR sudah saya approve 👌',
+    'Nice work! Component-nya reusable banget.',
+    'Ada issue di responsive, bisa cek?',
+  ],
+  ch3: [
+    'API response time sudah optimal, < 200ms.',
+    'Database query sudah di-optimize.',
+    'Endpoint baru sudah ready di staging.',
+    'Coba cek documentation di Swagger ya.',
+    'Migration script sudah saya prepare.',
+  ],
+  ch4: [
+    'Design-nya keren! Saya suka color palette-nya 🎨',
+    'Mungkin spacing-nya bisa ditambah sedikit.',
+    'Sudah sesuai brand guideline 👌',
+    'Saya prefer opsi yang kedua.',
+    'Typography-nya sudah perfect!',
+  ],
+  ch5: [
+    'Data-nya menarik! Bisa deep dive lebih lanjut?',
+    'Insight ini berguna banget untuk strategi kita.',
+    'Tolong export ke PDF ya untuk report.',
+    'Trend-nya positif, good job! 📈',
+    'Perlu segmentasi lebih detail.',
+  ],
+  ch6: [
+    'Haha setuju banget! 😂',
+    'Wah asik! Count me in! 🙌',
+    'Ada rekomendasi tempat makan siang?',
+    'Weekend ini ada yang mau hangout?',
+    'Kopi dulu yuk ☕',
+  ],
+};
